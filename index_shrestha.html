@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrestha Kapoor | Portfolio</title>
+    <!-- Modern Typography and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #f59e0b;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 120px 5% 60px;
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* Experience Cards */
+        section {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--secondary);
+            display: block;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 1rem;
+        }
+
+        .company {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .awards {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .award-badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .gold { background: #fef3c7; color: #92400e; }
+        .silver { background: #f1f5f9; color: #475569; }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        /* Contact Section */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .contact-btn.linkedin { background: #0077b5; }
+
+        .contact-btn i { margin-right: 10px; }
+
+        @media (min-width: 768px) {
+            header, section, footer { padding-left: 15%; padding-right: 15%; }
+            .card { padding: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SHRESTHA KAPOOR</div>
+    </nav>
+
+    <header>
+        <img src="image.png" alt="Shrestha Kapoor" class="profile-img">
+        <h1>Shrestha Kapoor</h1>
+        <span class="subtitle">Data Analyst & Benefits Specialist</span>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+            A professional journey reflecting a deep commitment to leveraging data for excellence, operational efficiency, and tangible community impact.
+        </p>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">Professional Profile</h2>
+        <div class="card">
+            <p>
+                Currently excelling as a <strong>Data Analyst at Ethos Benefits</strong>, leveraging over two years of specialized experience in the employee benefits sector. My expertise, initially honed within the APAC region, is now expanding to serve the dynamic US markets.
+            </p>
+            <br>
+            <p>
+                I am instrumental in leveraging data to streamline processes and enhance service delivery, with a commitment to optimizing client interactions and upholding fiduciary responsibilities that drive operational efficiency and client trust.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" style="background: #f1f5f9;">
+        <h2 class="section-title">Career Milestones</h2>
+        
+        <!-- Current Role -->
+        <div class="card">
+            <div class="job-header">
+                <div>
+                    <div class="company">Ethos Benefits</div>
+                    <div style="font-size: 0.9rem; color: var(--secondary);">Data Analyst</div>
+                </div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Present</div>
+            </div>
+            <ul>
+                <li>Managing multiple projects while supporting day-to-day BAU operations.</li>
+                <li>Collaborating with cross-functional teams to design advanced trigger logic in HRIS platforms.</li>
+                <li>Applying critical thinking to resolve complex benefits issues while ensuring SLAs are exceeded.</li>
+                <li>Driving operational excellence through proactive communication and effective time management.</li>
+            </ul>
+        </div>
+
+        <!-- Previous Role -->
+        <div class="card">
+            <div class="job-header">
+                <div>
+                    <div class="company">Aon Consulting</div>
+                    <div style="font-size: 0.9rem; color: var(--secondary);">Senior Benefits Processor</div>
+                    <div class="awards">
+                        <span class="award-badge gold"><i class="fas fa-medal"></i> 1 Gold Award</span>
+                        <span class="award-badge silver"><i class="fas fa-medal"></i> 2 Silver Awards</span>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Proficient in HRIS to maintain employee benefits records and generate insightful reports.</li>
+                <li>Direct accountability for client interactions, addressing inquiries and resolving guidance issues.</li>
+                <li>Managed the complete life-cycle of claims processing ensuring accuracy and regulatory compliance.</li>
+                <li>Implemented innovative solutions to streamline workflows and improve service delivery.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills-container">
+            <span class="skill-tag">HR Information Systems (HRIS)</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Benefits Administration</span>
+            <span class="skill-tag">Claims Life-cycle Management</span>
+            <span class="skill-tag">Client Account Management</span>
+            <span class="skill-tag">SLA Management</span>
+            <span class="skill-tag">Process Automation</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Fiduciary Responsibility</span>
+        </div>
+    </section>
+
+    <section id="leadership">
+        <h2 class="section-title">Leadership & Community</h2>
+        <div class="card" style="border-left: 5px solid var(--secondary);">
+            <div class="company">Interact Club (Rotary International)</div>
+            <div style="margin-bottom: 1rem; color: var(--secondary); font-weight: 500;">Vice President (Former Joint Secretary)</div>
+            <p style="color: var(--text-muted);">
+                Played a pivotal role in organizing impactful initiatives and leading successful fundraisers for the underprivileged. This experience reinforced a passion for social responsibility and effective project management.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 style="margin-bottom: 1.5rem;">Get In Touch</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.8;">Available for collaborations and professional inquiries.</p>
+        
+        <a href="mailto:shresthakapoor116@gmail.com" class="contact-btn">
+            <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/shrestha-kapoor" target="_blank" class="contact-btn linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        
+        <p style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.5;">
+            &copy; 2024 Shrestha Kapoor. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
